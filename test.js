@@ -8,7 +8,7 @@ function end(num1, num2, num3) {
     document.getElementById('itam' + num3).style.background = '#f1071d';
 
     setInterval(function () { title.innerHTML += '.' }, 1000);
-    setInterval(function () { location.reload() }, 4000)
+    setInterval(function () { location.reload() }, 4000);
 
 }
 function winner() {
@@ -38,6 +38,10 @@ function winner() {
     }
     else if (squares[3] == squares[5] && squares[5] == squares[7] && squares[3] != '') {
         end(3, 5, 7)
+    }
+    else if (squares[1] != '' && squares[2] != '' && squares[3] != '' && squares[4] != '' && squares[5] != '' && squares[6] != '' && squares[7] != '' && squares[8] != '' && squares[9] != '') {
+        setInterval(function () { title.innerHTML = 'Game Over' }, 1000);
+        setInterval(function () { location.reload() }, 4000);
     }
 
 }
